@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Photography Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      height: 100vh;
+      background: url('https://picsum.photos/id/1015/1600/900') no-repeat center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    section {
+      padding: 50px 10%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    /* Contact */
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .contact input, .contact textarea {
+      margin: 10px 0;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .contact button {
+      padding: 12px;
+      border: none;
+      background: #333;
+      color: white;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Photography Portfolio</h1>
+  </header>
+
+  <section>
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <a href="#img1"><img src="https://picsum.photos/id/1011/600/400" alt="photo1"></a>
+      <a href="#img2"><img src="https://picsum.photos/id/1012/600/400" alt="photo2"></a>
+      <a href="#img3"><img src="https://picsum.photos/id/1013/600/400" alt="photo3"></a>
+      <a href="#img4"><img src="https://picsum.photos/id/1015/600/400" alt="photo4"></a>
+    </div>
+  </section>
+
+  <!-- Lightbox Images -->
+  <div id="img1" class="lightbox">
+    <a href="#"><img src="https://picsum.photos/id/1011/1200/800"></a>
+  </div>
+  <div id="img2" class="lightbox">
+    <a href="#"><img src="https://picsum.photos/id/1012/1200/800"></a>
+  </div>
+  <div id="img3" class="lightbox">
+    <a href="#"><img src="https://picsum.photos/id/1013/1200/800"></a>
+  </div>
+  <div id="img4" class="lightbox">
+    <a href="#"><img src="https://picsum.photos/id/1015/1200/800"></a>
+  </div>
+
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="dhivakaran.E" required>
+      <input type="email" placeholder="dhiva321224@mail.com" required>
+      <textarea rows="5" placeholder="I am a photographer to take a photo to natural an romantic peoples an collection fo natural resources" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Photography | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
